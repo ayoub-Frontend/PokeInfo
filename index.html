@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <!-- Web Icon -->
+    <link rel="icon" href="./imgs/icon-web.webp">
+    <!-- Render All Fonts Normalize -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- Font Familly -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Css File -->
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+<body>
+    <!-- Start Settings Box -->
+    <div  class="settings-box">
+        <div onclick="open_menu()" class="toggle-settings">
+            <i class="fa-solid fa-gear settings-icon"></i>
+        </div>
+        <div class="settings-container">
+            <!-- Color Option -->
+            <div class="option-box">
+                <h4>Colors</h4>
+                <ul class="colors-list">
+                    <li class="active" data-color="#00a9ff"></li>
+                    <li data-color="#1eff3e"></li>
+                    <li data-color="#ff0000"></li>
+                    <li data-color="#ff00ff"></li>
+                    <li data-color="#5540ff"></li>
+                </ul>
+            </div>
+            <!-- Random Background Option -->
+            <div class="option-box">
+                <h4>Random Backgrounds</h4>
+                <div class="random-backgrounds">
+                    <span onclick="random_image()" class="yes active" data-background="yes">Yes</span>
+                    <span onclick="choose_image()" class="no" data-background="no">No</span>
+                </div>
+                <div class="image-choice">
+                    <ul>
+                        <li><img data-img="background-1.webp" src="./imgs/background-1.webp" alt=""></li>
+                        <li><img data-img="background-2.webp" src="./imgs/background-2.webp" alt=""></li>
+                        <li><img data-img="background-3.webp" src="./imgs/background-3.webp" alt=""></li>
+                        <li><img data-img="background-4.webp" src="./imgs/background-4.webp" alt=""></li>
+                        <li><img data-img="background-5.webp" src="./imgs/background-5.webp" alt=""></li>
+                        <li><img data-img="background-6.webp" src="./imgs/background-6.webp" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bullets Section Option -->
+            <div class="option-box">
+                <h4>Show Bulltes</h4>
+                <div class="bullets-option">
+                    <span class="yes active" data-display="show">Yes</span>
+                    <span class="no" data-display="hide">No</span>
+                </div>
+            </div>
+
+            <!-- Reset Options Button  -->
+            <button class="reset-option">Reset Options</button>
+        </div>
+    </div>
+    <!-- End Settings Box -->
+
+    <!-- Start Navigation Bullets -->
+    <div class="nav-bulltes">
+        <div class="bullet" data-section=".about-us">
+            <div class="tooltip">About Us</div>
+        </div>
+        <div class="bullet" data-section=".skills">
+            <div class="tooltip">Our Skills</div>
+        </div>
+        <div class="bullet" data-section=".gallery">
+            <div class="tooltip">Our Gallery</div>
+        </div>
+        <div class="bullet" data-section=".timeline">
+            <div class="tooltip">Our Timeline</div>
+        </div>
+        <div class="bullet" data-section=".features">
+            <div class="tooltip">Our Features</div>
+        </div>
+        <div class="bullet" data-section=".testimonials">
+            <div class="tooltip">Our Testimonials</div>
+        </div>
+    </div>
+    <!-- End Navigation Bullets -->
+
+    <!-- Start Landing Page -->
+    <div class="landing-page">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="header-area">
+                <div class="logo">Pokemon World</div>
+                <div class="links-container">
+                    <ul class="links">
+                        <li><a href="#" class="active" data-section=".about-us">About</a></li>
+                        <li><a href="#" data-section=".skills">Skills</a></li>
+                        <li><a href="#" data-section=".gallery">Gallery</a></li>
+                        <li><a href="#" data-section=".timeline">Timeline</a></li>
+                        <li><a href="#" data-section=".features">Features</a></li>
+                        <li><a href="#" data-section=".testimonials">Testimonials</a></li>
+                </ul>
+                <button class="toggle-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                </div>
+            </div>
+        </div>
+        <div class="introduction-text">
+            <h1>We are <span>Pokemon</span> Trainers</h1>
+            <p>Our world here we have special creation named <span>Pokemon</span> That are our pets or even worse.</p>
+        </div>
+    </div>
+    <!-- End Landing Page -->
+
+    <!-- Start About Us Section -->
+    <div class="container">
+        <div class="about-us">
+            <div class="info-box">
+                <h2>About Us</h2>
+                <p>
+                    Born in 1996 from one boy's dream of catching every creature he could ever find, Pokémon became the world's most beloved franchise.
+                    Over a thousand species, countless worlds, and a battle cry that echoes across generations — Gotta Catch 'Em All!
+                    It's not just a game. It's a feeling you carry from the moment you first see one.
+                    Welcome to the world of Pokémon.
+                </p>
+            </div>
+            <div class="image-box">
+                <img src="./imgs/about-us.webp" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End About Us Section -->
+
+    <!-- Start Our Skills Section -->
+    <div class="skills">
+        <div class="container">
+            <h2>Our Abillities</h2>
+            <!-- First Abillitey -->
+            <div class="skill-box">
+                    <div class="skill-name">Flare boost</div>
+                    <div class="skill-progress">
+                        <span data-progress="40%"></span>
+                    </div>
+            </div>
+            <!-- Second Abillitey -->
+            <div class="skill-box">
+                <div class="skill-name">Illusion</div>
+                <div class="skill-progress">
+                    <span data-progress="85%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Air Lock</div>
+                <div class="skill-progress">
+                    <span data-progress="90%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Anticipation</div>
+                <div class="skill-progress">
+                    <span data-progress="65%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Berserk</div>
+                <div class="skill-progress">
+                    <span data-progress="30%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Dragon's Maw</div>
+                <div class="skill-progress">
+                    <span data-progress="72%"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Abillities Section -->
+
+    <!-- Start Gallery Section -->
+    <div class="gallery">
+        <div class="container">
+            <h2>Our Gallery</h2>
+            <div class="images-box">
+                <img src="./imgs/gallary-13.webp" alt="Pikacho">
+                <img src="./imgs/gallary-2.webp" alt="Pokemon Evolution">
+                <img src="./imgs/gallary-3.webp" alt="Evie">
+                <img src="./imgs/gallary-4.webp" alt="Mega Latios">
+                <img src="./imgs/gallary-5.webp" alt="Ash's Kalos Journey Cast">
+                <img src="./imgs/gallary-6.webp" alt="The Four Greate Creation">
+                <img src="./imgs/gallary-7.webp" alt="Pokemon Leagues">
+                <img src="./imgs/gallary-8.webp" alt="Raikoza">
+                <img src="./imgs/gallary-9.webp" alt="Riders of the Legendary Sky">
+                <img src="./imgs/gallary-10.webp" alt="Trinity of Kalos">
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery Section -->
+
+    <!-- Start TimeLine Section -->
+    <div class="timeline">
+        <div class="container">
+            <div class="timeline-content">
+                <div class="description">1. Prologue: The Journey Before The Journey</div>
+                <!-- Plog One -->
+                <div class="year">1380</div>
+
+                <div class="left">
+                    <div class="content">
+                        <h3>The Journey Before The Journey</h3>
+                        <p>Ash went on a Pokemon adventure in the forest when he was just a little boy. He got lost and took shelter under a tree along with some Pokemon, inspiring his dream to become a Pokemon trainer.</p>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>The Beginning</h3>
+                        <p>Ash was just 10 when he started his incredible Pokemon journey! He overslept, missed his first choice of Pokemon, and ended up with Pikachu, who didn’t like him at first and shocked him.</p>
+                    </div>
+                </div>
+
+                <div class="clear-fix"></div>
+
+                    <!-- Plog Two -->
+                <div class="description">3. Gold & Silver</div>
+                <div class="year">1385</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Johto League</h3>
+                        <p>Ash collected five Gym Badges by battling Gym Leaders like Falkner and Bugsy. He even caught a shiny Noctowl and fought with his old friend Misty. Sadly, he also had to say goodbye to his Charizard, leaving it at the Charicific Valley to train.</p>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+                <div class="description">4. Ruby and Sapphire </div>
+                <div class="right">
+                    <div class="content">
+                        <h3>I. Hoenn</h3>
+                        <p>The next leg of Ash’s journey took him to the Hoenn region, where he met May, and Max and Brock also returned. May wanted to be a Pokemon coordinator, so Ash helped her as much as possible while exploring the region. </p>
+                    </div>
+                </div>
+
+                <div class="clear-fix"></div>
+
+                <!-- Plog Three -->
+                <div class="description">5. Diamond and Pearl</div>
+                <div class="year">1895</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>I. Sinnoh</h3>
+                        <p>Ash went to Sinnoh, leaving his new captures at Professor Oak’s lab except for Aipom, who snuck along. He reunited with Brock and got a new travel buddy, Dawn, who wanted to be a Pokemon coordinator like her mom.</p>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+                <div class="description">6. Black and White</div>
+                <div class="right">
+                    <div class="content">
+                        <h3>I. Unova</h3>
+                        <p>Ash continued his journey through Unova; he caught some cool new Pokemon like Oshawott, Tepig, and Snivy and won a bunch of badges, including the trio badge, basic badge, and insect badge. He made it to the Unova Pokemon League and placed in the top eight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End TimeLine Section -->
+
+    <!-- Start Feauters Section -->
+    <div class="features">
+        <h2>Our Features</h2>
+        <div class="container">
+            <!-- First Feature -->
+            <div class="feat-box">
+                <div class="feat-img">
+                    <img src="./imgs/features-1.webp" alt="">
+                </div>
+                <h4>Pokédex</h4>
+                <p>Search every Pokémon by name or number; shows type, weaknesses, abilities, stats, evolution charts, and related TCG cards/episodes.</p>
+            </div>
+            <!-- Second Feature -->
+            <div class="feat-box">
+                <div class="feat-img">
+                    <img src="./imgs/features-2.webp" alt="">
+                </div>
+                <h4>Video Games & Apps</h4>
+                <p>	Info on current titles (Pokémon Champions, Pokémon GO, Pokémon Legends: Z-A, Pokémon Pokopia, Pokémon HOME, Pokémon UNITE), news, and updates.</p>
+            </div>
+            <!-- Third Feature -->
+            <div class="feat-box">
+                <div class="feat-img">
+                    <img src="./imgs/features-3.webp" alt="">
+                </div>
+                <h4>Trading Card Game</h4>
+                <p>Card galleries, expansion previews, deck strategies, a searchable card database, "How to Play" tutorials, and TCG Live/Pocket links.</p>
+            </div>
+            <!-- Fourth Feature -->
+            <div class="feat-box">
+                <div class="feat-img">
+                    <img src="./imgs/features-4.webp" alt="">
+                </div>
+                <h4>Play! Pokémon Events</h4>
+                <p>Event locator, Championship Series info, rules & resources, leaderboards, and organized-play news for TCG and video game tournaments.</p>
+            </div>
+            <!-- Fifth Feature -->
+            <div class="feat-box">
+                <div class="feat-img">
+                    <img src="./imgs/features-5.webp" alt="">
+                </div>
+                <h4>Animation</h4>
+                <p>	Episode and movie encyclopedias, plus a "Where to Watch" guide for the Pokémon animated series. </p>
+            </div>
+            <!-- Sixth Feature -->
+            <div class="feat-box">
+                <div class="feat-img">
+                    <img src="./imgs/features-6.webp" alt="">
+                </div>
+                <h4>News / Features & Strategy</h4>
+                <p>Latest announcements, World Championships previews, expert strategy articles, and special features (e.g., region spotlights, card highlights).</p>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+    </div>
+    <!-- End Feauters Section -->
+
+    <!-- Start Testimonials Section -->
+    <div class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <img src="./imgs/background-5.webp" alt="">
+            <div class="ts-box">
+                <p>I was skeptical at first, but the whole experience was so smooth and easy to navigate. I didn't need to call support once — everything just worked exactly as expected.</p>
+                <div class="person-info">
+                    <img src="./imgs/testimonilas-1.webp" alt="">
+                    <h4>Jessica M.</h4>
+                    <p>CEO At Company</p>
+                </div>
+            </div>
+
+            <div class="ts-box">
+                <p>From the moment I landed on the page I knew this was different. It's fast, professional, and I felt like someone actually thought about what a visitor needs.</p>
+                <div class="person-info">
+                    <img src="./imgs/testimonilas-2.webp" alt="">
+                    <h4>Daniel R.</h4>
+                    <p>CEO At Company</p>
+                </div>
+            </div>
+
+            <div class="ts-box">
+                <p>From the moment I landed on the page I knew this was different. It's fast, professional, and I felt like someone actually thought about what a visitor needs.</p>
+                <div class="person-info">
+                    <img src="./imgs/testimonilas-3.webp" alt="">
+                    <h4>Daniel R.</h4>
+                    <p>CEO At Company</p>
+                </div>
+            </div>
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    <!-- End Testimonials Section -->
+
+    <!-- Start Contact Us Section -->
+    <div class="contact">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="">
+                <div class="left">
+                    <input type="text" placeholder="Your Name" name="username">
+                    <input type="number" placeholder="Your Phone Number" name="Phone Number">
+                    <input type="email" placeholder="Your Email" name="Email">
+                    <input type="text" placeholder="Subject" name="Subject">
+                </div>
+                <div class="right">
+                    <textarea name="Message" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact Us Section -->
+
+    <!-- Start Footer -->
+    <div class="footer">Created With Love By Ayoub</div>
+    <!-- End Footer -->
+    <script src="./js/master.js"></script>
+</body>
+</html>
